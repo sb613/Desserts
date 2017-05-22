@@ -1,1 +1,29 @@
 --Apple pie! For best results-serve warm.
+print("mod apple pie Loading...")
+
+print("++++++++ Hello from s +++++++++")
+--minetest.after(7,
+--      function(params)
+--              minetest.chat_send_all("Don't Forget- It's apple picking season!")
+--})
+minetest.register_craftitem("Pie:apple pie", {
+        --description = S("Apple pie"),
+        inventory_image = "farming_donut.png",
+        on_use = minetest.item_eat(8)
+        --minetest.after(5, function(params)
+        --              minetest.chat_send_all("Wasn't that delicous?!")
+        --      end
+        --)
+})
+
+minetest.register_craft({
+        output = "apple pie 1",
+        recipe = {
+                {'', '', ''},
+                {'farming:wheat', 'default:apple', 'farming:wheat'},
+                {'', 'farming:wheat', ''},
+        }
+})--To craft one apple pie you need 3 wheat and one apple.
+--This is a simple but very filling pie.
+
+print("mod apple pie Loaded!")
